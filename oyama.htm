@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Motion database</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- CSS
+================================================== -->
+<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/bootstrap-responsive.css">
+<link rel="stylesheet" href="css/flexslider.css" />
+<link rel="stylesheet" href="css/custom-styles.css">
+
+<!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <link rel="stylesheet" href="css/style-ie.css"/>
+<![endif]--> 
+
+<!-- Favicons
+================================================== -->
+<link rel="shortcut icon" href="img/mocap_ico.png">
+<link rel="apple-touch-icon" href="img/mocap_ico.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/mocap_ico.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/mocap_ico.png">
+
+<!-- JS
+================================================== -->
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/jquery.custom.js"></script>
+<script type="text/javascript">
+     $(window).load(function(){
+
+    $('.flexslider').flexslider({
+        animation: "slide",
+        slideshow: true,
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+    });  
+});
+</script>
+
+</head>
+
+<body class="home">
+    <!-- Color Bars (above header)-->
+	<div class="color-bar-1"></div>
+    <div class="color-bar-2 color-bg"></div>
+    
+    <div class="container">
+    
+      <div class="row header"><!-- Begin Header -->
+      
+        <!-- Logo
+        ================================================== -->
+        <div class="span5 logo">
+        	<a href="index.htm"><img src="img/mocap.png" alt="" /></a>
+			<a href="oyama.htm"><img src="img/flags/United-Kingdom.png"></a>
+			<a href="oyama_pl.htm"><img src="img/flags/Poland.png"></a>
+            <h5>Movements analysis, classification and motion capture karate database</h5>
+        </div>
+        
+        <!-- Main Navigation
+        ================================================== -->
+        <div class="span7 navigation">
+            <div class="navbar hidden-phone">
+            
+            <ul class="nav">
+			<!--
+            <li class="dropdown active">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="index.htm">Home <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="index.htm">Full Page</a></li>
+                    <li><a href="index-gallery.htm">Gallery Only</a></li>
+                    <li><a href="index-slider.htm">Slider Only</a></li>
+                </ul>
+            </li>-->
+			<li class="dropdown active">
+			<a href="index.htm">Home</a></li>
+           <!--<li><a href="features.htm">Our papers</a></li>
+		   <li><a href="features.htm">Datasets</a></li>-->
+	   
+
+		   <!--
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="page-full-width.htm">Datasets <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="page-full-width.htm">Full Width</a></li>
+                    <li><a href="page-right-sidebar.htm">Right Sidebar</a></li>
+                    <li><a href="page-left-sidebar.htm">Left Sidebar</a></li>
+                    <li><a href="page-double-sidebar.htm">Double Sidebar</a></li>
+                </ul>
+            </li>
+			-->
+			<!--
+             <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="gallery-4col.htm">Gallery <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="gallery-3col.htm">Gallery 3 Column</a></li>
+                    <li><a href="gallery-4col.htm">Gallery 4 Column</a></li>
+                    <li><a href="gallery-6col.htm">Gallery 6 Column</a></li>
+                    <li><a href="gallery-4col-circle.htm">Gallery 4 Round</a></li>
+                    <li><a href="gallery-single.htm">Gallery Single</a></li>
+                </ul>
+             </li>
+			 -->
+             <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="blog-style1.htm">Karate styles <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="shorin-ryu.htm">Shorin-Ryu</a></li>
+                    <li><a href="shotokan.htm">Shotokan</a></li>
+                    <li><a href="oyama.htm">Oyama</a></li>
+                </ul>
+             </li>
+             <li><a href="page-contact.htm">Contact</a></li>
+            </ul>
+           
+            </div>
+
+            <!-- Mobile Nav
+            ================================================== -->
+            <form action="#" id="mobile-nav" class="visible-phone">
+                <div class="mobile-nav-select">
+                <select onchange="window.open(this.options[this.selectedIndex].value,'_top')">
+                    <option value="">Navigate...</option>
+					<option value="index.htm">Home</option>
+                    <option value="">Karate styles</option>
+                        <option value="shorin-ryu.htm">- Shorin-Ryu</option>
+                        <option value="shotokan.htm">- Shotokan</option>
+                        <option value="oyama.htm">- Oyama</option>
+                    <option value="page-contact.htm">Contact</option>
+                </select>
+                </div>
+                </form>
+
+        </div>
+        
+      </div><!-- End Header -->
+     
+    <div class="row headline"><!-- Begin Headline -->
+   
+       
+
+		
+		<div class="span12">
+			<img src="img/gallery/oyama.png"/><br>
+			On this website you can download and play in 3D selected katas and techniques. 
+			Just select your favorite karateka (dataset) and click a button.
+			An order of datasets is random.
+			<h1>Dataset 1</h2>
+			<h4>Woman, black belt, height: 168 cm</h4>
+			<h3>Kata</h3>
+			Click the button to open 3D visualization*,**</br></br>
+			<a href="bvh/index.html?t=kata1" target="blank"><button class="btn btn-large btn-warning" type="button">Sono Ichi - click to open</button></a>
+			</br></br>
+			* There is no translation in visualization.</br>
+			** Browser requirements: IE v.11, Firefox v.53, Chrome v.58, Safari v.?
+			<h3>Techniques</h3>
+			The below *.zip archive contains motion capture data of following techniques:</br>
+			Furi uchi (l, r), shita uchi (l, r), tsuki (l, r), hiza geri (l, r), 
+			mae geri (l, r), mawashi geri (l, r), yoko geri (l, r)
+			jodan uke (l, r), gedan barai (l, r), soto uke (l, r), uchi uke (l, r), 
+			kiba dachi (l, r), kokutsu dachi (l, r), zenkutsu dachi (l, r).</br>
+			All are stored in *.csv and *.bvh file format. (l, r) means left and right side.</br></br>
+			<a href="http://ux.up.krakow.pl/~tomaszh/data/data.zip" target="blank"><button class="btn btn-large btn-warning" type="button">Click to download</button></a>
+		</div>
+    </div><!-- End Headline -->
+    
+
+
+
+    </div> <!-- End Container -->
+
+    <!-- Footer Area
+        ================================================== -->
+
+	<div class="footer-container"><!-- Begin Footer -->
+    	<div class="container">
+        	<div class="row footer-row">
+                <div class="span12 footer-col">
+                    <!--<h5>About Us</h5>-->
+                    <!--<img src="img/piccolo-footer-logo.png" alt="Piccolo" /><br /><br />-->
+                    <address>
+                        <strong>Design Team</strong><br />
+                        <a href="https://www.researchgate.net/profile/Tomasz_Hachaj" target="_blank">Tomasz Hachaj</a>, 
+						<a href="https://www.researchgate.net/profile/Marcin_Piekarczyk" target="_blank">Marcin Piekarczyk</a>, 
+						<a href="https://www.researchgate.net/profile/Marek_Ogiela" target="_blank">Marek R. Ogiela</a>, 
+						<a href="http://www.up.krakow.pl/en" target="_blank">The Pedagogical University of Cracow</a>,
+						<a href="http://www.ii.up.krakow.pl/en/" target="_blank">Institute of Computer Science</a>
+						ul. Podchorążych 2, 30-084 Kraków, Poland
+                    </address>
+                    <ul class="social-icons">
+						<li><a href="https://www.researchgate.net/project/Development-of-new-machine-learning-methods-for-human-actions-evaluation-and-recognition" class="social-icon dribble"  target="_blank"></a></li>
+                        <li><a href="https://github.com/browarsoftware" class="social-icon facebook" target="_blank"></a></li>
+                        <li><a href="https://twitter.com/GDL_project" class="social-icon twitter" target="_blank"></a></li>
+						<li><a href="https://www.youtube.com/user/ccilaboratory" class="social-icon rss" target="_blank"></a></li>
+							<!--
+                        <li><a href="#" class="social-icon forrst"></a></li>-->
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row"><!-- Begin Sub Footer -->
+                <div class="span12 footer-col footer-sub">
+                    <div class="row no-margin">
+                        <div class="span6"><span class="left">Copyright 2017 Tomasz Hachaj, Marcin Piekarczyk, Marek R. Ogiela. All rights reserved.</span></div>
+                        <div class="span6">
+                            <span class="right">
+                            <a href="index.html">Home</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="shorin-ryu.htm">Shorin-Ryu</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="shotokan.htm">Shotokan</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="oyama.htm">Oyama</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="page-contact.htm">Contact</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- End Sub Footer -->
+
+        </div>
+    </div><!-- End Footer --> 
+    
+    <!-- Scroll to Top -->  
+    <div id="toTop" class="hidden-phone hidden-tablet">Back to Top</div>
+    
+</body>
+</html>
