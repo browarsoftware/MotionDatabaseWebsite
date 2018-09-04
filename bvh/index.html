@@ -134,6 +134,12 @@
 
             if(SeaStandard)lightPos.horizontal+=180;
 
+			var rotateAngle = getParameterByName('r');
+			if (rotateAngle != null)
+			{
+				camPos.horizontal = parseInt(rotateAngle);
+			}
+			
 			debug = document.getElementById("debug");
 			progBar = document.getElementById("progressBar");
 			//document.getElementById('files').addEventListener('change', handleFileSelect, false);
