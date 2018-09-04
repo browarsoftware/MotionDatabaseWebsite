@@ -1,0 +1,7 @@
+BVH frame
+
+this.frame
+
+if(this.frame > this.numFrames )this.frame = 0;
+
+debugTell("asdasd");

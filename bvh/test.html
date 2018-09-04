@@ -1,0 +1,58 @@
+<html>
+<head>
+    <title>Progress bar example</title>
+    <style type="text/css">
+    #pbar
+    {
+        /* style the progress bar */
+        border: 1px solid black;
+        color: Blue;
+        background-color:Yellow;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function goingUp() {
+            // add 5% to value
+            var pBar = document.getElementById("pbar");
+            if (pBar.value <= (pBar.max - 5)) {
+                pbar.value += 5;
+            }
+            checkStatus();
+        }
+
+        function checkStatus() {
+            // Shows position and value
+            // -1 for indeterminate, otherwise current value divided by max.
+            var pBar = document.getElementById("pbar");
+            document.getElementById("positionStatus").innerHTML = "Value: " + pBar.value;
+            document.getElementById("positionStatus").innerHTML += "<br/>Position: " + pBar.position.toFixed(3);
+        }
+
+        function toggle() {
+            var pBar = document.getElementById("pbar");
+            if (pBar.hasAttribute("value")) {
+                //  Removing the value attribute makes the progress bar indeterminate
+                pBar.removeAttribute("value");
+                document.getElementById("tgl").innerHTML = "Make determinate";
+            } else {
+                //  Setting the value attribute makes the progress bar determinate
+                pBar.value = 5;
+                document.getElementById("tgl").innerHTML = "Make indeterminate";
+            }
+            checkStatus();
+        }
+
+</script>
+</head>
+<body onload="checkStatus();">
+<h1>Progress bar test</h1>
+  <p>Click Up to change to a determinate bar and use buttons move the progress up or down by 5% increments.</p>
+  <div>
+    <label id="progLabel">Progress: <progress id="pbar" max="100">Put alternate display here</progress></label>
+    <button onclick="goingUp();">Up</button>
+    <button id= "tgl" onclick="toggle();">Make determinate</button>
+</div>
+<div id="positionStatus"></div>
+</body>
+</html>

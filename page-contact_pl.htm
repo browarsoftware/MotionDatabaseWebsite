@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style>
+      #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Baza danych z nagraniami motion capture</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- CSS
+================================================== -->
+<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/bootstrap-responsive.css">
+<link rel="stylesheet" href="css/prettyPhoto.css" />
+<link rel="stylesheet" href="css/flexslider.css" />
+<link rel="stylesheet" href="css/custom-styles.css">
+
+<!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <link rel="stylesheet" href="css/style-ie.css"/>
+<![endif]--> 
+
+<!-- Favicons
+================================================== -->
+<link rel="shortcut icon" href="img/mocap_ico.png">
+<link rel="apple-touch-icon" href="img/mocap_ico.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/mocap_ico.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/mocap_ico.png">
+
+<!-- JS
+================================================== -->
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.prettyPhoto.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/jquery.custom.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+
+    $("#btn-blog-next").click(function () {
+      $('#blogCarousel').carousel('next')
+    });
+     $("#btn-blog-prev").click(function () {
+      $('#blogCarousel').carousel('prev')
+    });
+
+     $("#btn-client-next").click(function () {
+      $('#clientCarousel').carousel('next')
+    });
+     $("#btn-client-prev").click(function () {
+      $('#clientCarousel').carousel('prev')
+    });
+    
+});
+
+ $(window).load(function(){
+
+    $('.flexslider').flexslider({
+        animation: "slide",
+        slideshow: true,
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+    });  
+});
+
+</script>
+
+</head>
+
+<body class="home">
+    <!-- Color Bars (above header)-->
+	<div class="color-bar-1"></div>
+    <div class="color-bar-2 color-bg"></div>
+    
+    <div class="container">
+    
+      <div class="row header"><!-- Begin Header -->
+      
+        <!-- Logo
+        ================================================== -->
+        <div class="span5 logo">
+        	<a href="index.htm"><img src="img/mocap.png" alt="" /></a>
+			<a href="page-contact.htm"><img src="img/flags/United-Kingdom.png"></a>
+			<a href="page-contact_pl.htm"><img src="img/flags/Poland.png"></a>
+            <h5>Analiza i klasyfikacja ruchu oraz baza danych z nagraniami motion capture karate</h5>
+        </div>
+        
+        <!-- Main Navigation
+        ================================================== -->
+        <div class="span7 navigation">
+            <div class="navbar hidden-phone">
+            <ul class="nav">
+			<!--
+            <li class="dropdown active">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="index.htm">Home <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="index.htm">Full Page</a></li>
+                    <li><a href="index-gallery.htm">Gallery Only</a></li>
+                    <li><a href="index-slider.htm">Slider Only</a></li>
+                </ul>
+            </li>-->
+			<li class="dropdown active">
+			<a href="index_pl.htm">Strona startowa</a></li>
+           <!--<li><a href="features.htm">Our papers</a></li>
+		   <li><a href="features.htm">Datasets</a></li>-->
+	   
+
+		   <!--
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="page-full-width.htm">Datasets <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="page-full-width.htm">Full Width</a></li>
+                    <li><a href="page-right-sidebar.htm">Right Sidebar</a></li>
+                    <li><a href="page-left-sidebar.htm">Left Sidebar</a></li>
+                    <li><a href="page-double-sidebar.htm">Double Sidebar</a></li>
+                </ul>
+            </li>
+			-->
+			<!--
+             <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="gallery-4col.htm">Gallery <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="gallery-3col.htm">Gallery 3 Column</a></li>
+                    <li><a href="gallery-4col.htm">Gallery 4 Column</a></li>
+                    <li><a href="gallery-6col.htm">Gallery 6 Column</a></li>
+                    <li><a href="gallery-4col-circle.htm">Gallery 4 Round</a></li>
+                    <li><a href="gallery-single.htm">Gallery Single</a></li>
+                </ul>
+             </li>
+			 -->
+             <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="blog-style1.htm">Karate styles <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="shorin-ryu_pl.htm">Shorin-Ryu</a></li>
+                    <li><a href="shotokan_pl.htm">Shotokan</a></li>
+                    <li><a href="oyama_pl.htm">Oyama</a></li>
+                </ul>
+             </li>
+             <li><a href="page-contact_pl.htm">Kontakt</a></li>
+            </ul>
+           
+            </div>
+
+            <!-- Mobile Nav
+            ================================================== -->
+            <form action="#" id="mobile-nav" class="visible-phone">
+                <div class="mobile-nav-select">
+                <select onchange="window.open(this.options[this.selectedIndex].value,'_top')">
+                    <option value="">Nawigacja...</option>
+					<option value="index_pl.htm">Strona startowa</option>
+                    <option value="">Style karate</option>
+                        <option value="shorin-ryu_pl.htm">- Shorin-Ryu</option>
+                        <option value="shotokan_pl.htm">- Shotokan</option>
+                        <option value="oyama_pl.htm">- Oyama</option>
+                    <option value="page-contact_pl.htm">Kontakt</option>
+                </select>
+                </div>
+                </form>
+
+        </div>
+        
+      </div><!-- End Header -->
+     
+    <!-- Page Content
+    ================================================== --> 
+    <div class="row"><!--Container row-->
+
+        <div class="span8 contact"><!--Begin page content column-->
+
+            <h2>Gdzie nas znaleźć</h2>
+			<div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 50.072981, lng: 19.908405};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbctRLvFH8cedMGIJHb_DqlMLt3CW4fow&callback=initMap">
+    </script>
+
+			<!--
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla iaculis mattis lorem, quis gravida nunc iaculis ac. Proin tristique tellus in est vulputate luctus fermentum ipsum molestie. Vivamus tincidunt sem eu magna varius elementum. Maecenas felis tellus, fermentum vitae laoreet vitae, volutpat et urna.</p>
+
+            <div class="alert alert-success">
+                Well done! You successfully read this important alert message. 
+            </div>
+
+            <form action="#" id="contact-form">
+                <div class="input-prepend">
+                    <span class="add-on"><i class="icon-user"></i></span>
+                    <input class="span4" id="prependedInput" size="16" type="text" placeholder="Name">
+                </div>
+                <div class="input-prepend">
+                    <span class="add-on"><i class="icon-envelope"></i></span>
+                    <input class="span4" id="prependedInput" size="16" type="text" placeholder="Email Address">
+                </div>
+                <div class="input-prepend">
+                    <span class="add-on"><i class="icon-globe"></i></span>
+                    <input class="span4" id="prependedInput" size="16" type="text" placeholder="Website URL">
+                </div>
+                <textarea class="span6"></textarea>
+                <div class="row">
+                    <div class="span2">
+                        <input type="submit" class="btn btn-inverse" value="Send Message">
+                    </div>
+                </div>
+            </form>
+		-->
+        </div> <!--End page content column-->
+
+        <!-- Sidebar
+        ================================================== --> 
+        <div class="span4 sidebar page-sidebar"><!-- Begin sidebar column -->
+            <h5 class="title-bg">Adres</h5>
+            <address>
+            <strong>Instytut Informatyki</strong><br>
+			Uniwersytet Pedagogiczny Imienia Komisji Edukacji Narodowej w Krakowie</br>
+			ul. Podchorążych 2,</br>
+			30-084 Kraków</br>
+            <abbr title="Phone">Telefon:</abbr> (+48 12) 662 78 45
+            </address>
+             
+            <address>
+            <strong>dr hab. inż. Tomasz Hachaj</strong><br>
+            <abbr title="Phone">Email:</abbr> <a href="">tomekhachaj at o2.pl</a>
+            </address>
+			
+            <h5 class="title-bg"></h5>
+			</br>
+			</br>
+			</br>
+			</br>
+			</br>
+			</br>
+            <!--<img src="img/location-map.jpg" alt="map">-->
+			
+        </div><!-- End sidebar column -->
+
+    </div><!-- End container row -->
+    
+    </div> <!-- End Container -->
+
+    <!-- Footer Area
+        ================================================== -->
+
+	<div class="footer-container"><!-- Begin Footer -->
+    	<div class="container">
+        	<div class="row footer-row">
+                <div class="span12 footer-col">
+                    <!--<h5>About Us</h5>-->
+                    <!--<img src="img/piccolo-footer-logo.png" alt="Piccolo" /><br /><br />-->
+                    <address>
+                        <strong>Grupa projektowa</strong><br />
+                        <a href="https://www.researchgate.net/profile/Tomasz_Hachaj" target="_blank">Tomasz Hachaj</a>, 
+						<a href="https://www.researchgate.net/profile/Marcin_Piekarczyk" target="_blank">Marcin Piekarczyk</a>, 
+						<a href="https://www.researchgate.net/profile/Marek_Ogiela" target="_blank">Marek R. Ogiela</a>, 
+						<a href="http://www.up.krakow.pl" target="_blank">Uniwersytet Pedagogiczny im. Komisji Edukacji Narodowej w Krakowie</a>,
+						<a href="http://www.ii.up.krakow.pl" target="_blank">Instytut Informatyki</a>,
+						ul. Podchorążych 2, 30-084 Kraków, Polska
+                    </address>
+                    <ul class="social-icons">
+						<li><a href="https://www.researchgate.net/project/Development-of-new-machine-learning-methods-for-human-actions-evaluation-and-recognition" class="social-icon dribble"  target="_blank"></a></li>
+                        <li><a href="https://github.com/browarsoftware" class="social-icon facebook" target="_blank"></a></li>
+                        <li><a href="https://twitter.com/GDL_project" class="social-icon twitter" target="_blank"></a></li>
+						<li><a href="https://www.youtube.com/user/ccilaboratory" class="social-icon rss" target="_blank"></a></li>
+							<!--
+                        <li><a href="#" class="social-icon forrst"></a></li>-->
+                    </ul>
+                </div>
+                <!--<div class="span3 footer-col">
+                    <h5>Latest Tweets</h5>
+                    <ul>
+                        <li><a href="#">@room122</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                        <li><a href="#">@room122</a> In interdum felis fermentum ipsum molestie sed porttitor ligula rutrum. Morbi blandit ultricies ultrices.</li>
+                        <li><a href="#">@room122</a> Vivamus nec lectus sed orci molestie molestie. Etiam mattis neque eu orci rutrum aliquam.</li>
+                    </ul>
+                </div>-->
+                <!--<div class="span3 footer-col">
+                    <h5>Latest Posts</h5>
+                     <ul class="post-list">
+                        <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                        <li><a href="#">Consectetur adipiscing elit est lacus gravida</a></li>
+                        <li><a href="#">Lectus sed orci molestie molestie etiam</a></li>
+                        <li><a href="#">Mattis consectetur adipiscing elit est lacus</a></li>
+                        <li><a href="#">Cras rutrum, massa non blandit convallis est</a></li>
+                    </ul>
+                </div>-->
+				<!--
+                <div class="span3 footer-col">
+                    <h5>CCI laboratory</h5>
+					<p><a href="http://cci.up.krakow.pl/" target="_blank">The Laboratory of Cryptography and Cognitive Informatics</a> whose Head is <a href="http://home.agh.edu.pl/~mogiela/" target="_blank">Professor 
+					Dr. Marek R. Ogiela</a> is a part of <a href="http://kimk.up.krakow.pl/en/" target="_blank">Institute of Computer Science</a> in <a href="http://wmft.up.krakow.pl/wydzial_dzis_en.html" target="_blank">Faculty of Mathematics, 
+					Physics and Technical Science</a> of <a href="http://www.up.krakow.pl/main/eng/" target="_blank">Pedagogical University of Krakow</a>. The members of Laboratory conduct research 
+					in the field of cryptography and application of cognitive methods in analysis of image data. 
+					</p>	
+                    <!--<ul class="img-feed">
+                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
+                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
+                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
+                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
+                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
+                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
+                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
+                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
+                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
+                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
+                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
+                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
+                    </ul>
+                </div>-->
+            </div>
+
+            <div class="row"><!-- Begin Sub Footer -->
+                <div class="span12 footer-col footer-sub">
+                    <div class="row no-margin">
+                        <div class="span6"><span class="left">Copyright 2017 Tomasz Hachaj, Marcin Piekarczyk, Marek R. Ogiela. All rights reserved.</span></div>
+                        <div class="span6">
+                            <span class="right">
+                            <a href="index.html">Strona Startowa</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="shorin-ryu.htm">Shorin-Ryu</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="shotokan.htm">Shotokan</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="oyama.htm">Oyama</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="page-contact.htm">Kontakt</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- End Sub Footer -->
+
+        </div>
+    </div><!-- End Footer --> 
+    
+    <!-- Scroll to Top -->  
+    <div id="toTop" class="hidden-phone hidden-tablet">Wróć na górę strony</div>
+    
+</body>
+</html>
